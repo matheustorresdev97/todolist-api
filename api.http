@@ -1,0 +1,24 @@
+@baseUrl = http://localhost:3333
+
+### Criar uma nova tarefa
+POST {{baseUrl}}/task
+Content-Type: application/json
+
+{
+  "task_description": "Minha nova tarefa",
+  "is_completed": false
+}
+
+### Atualizar uma tarefa
+PATCH {{baseUrl}}/task/37fa1139-9ab0-4fc2-b393-d957f650dd67
+Content-Type: application/json
+
+{
+  "is_completed": false
+}
+
+### Deletar uma tarefa
+DELETE {{baseUrl}}/task/{id}
+
+### Listar todas as tarefas
+GET {{baseUrl}}/tasks
